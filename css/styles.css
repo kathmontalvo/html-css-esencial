@@ -82,3 +82,34 @@ h2 {
 h3 {
     font-size: 1.5em;
 }
+
+pre {
+    background-color: #FEC62E;
+}
+
+.hero {
+    height: 350px;
+    width: 100%;
+    /* background-image: red url("../img/pattern.png"); */
+    background-image: linear-gradient(3.36deg, #ffffff -63.62%, rgba(255, 255, 255, 0) 43.49%), url("../img/pattern.png");
+}
+
+.section-content {
+    counter-reset: titleList;
+}
+
+.section-content h3 {
+    counter-increment: titleList;
+}
+
+.section-content h3::before {
+    content: counter(titleList) ". ";
+}
+
+.section-content h3::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--gray40);
+    display: block;
+}
